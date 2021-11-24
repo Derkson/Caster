@@ -1,0 +1,79 @@
+{
+    "name": "Factorio",
+    "timescale": "continuous",
+    "isFinitelyTimed": false,
+    "goals": [
+        {
+            "tokenName":"automationSciencePack",
+            "rate":1
+        }
+    ],
+    "container": {
+        "dimensions":0,
+        "size":[-1,-1],
+        "constraints":[]
+    },
+    "processTypes":[
+        {
+            "name":"assemblyProcesses",
+            "processes":[
+                {
+                    "name":"automationSciencePack",
+                    "input":[
+                        {
+                            "tokenName":"ironPlate",
+                            "rate":0.2
+                        },
+                        {
+                            "tokenName":"copperPlate",
+                            "rate":0.2
+                        }
+                    ],
+                    "output":[
+                        {
+                            "tokenName":"automationSciencePack",
+                            "rate":2
+                        }
+                    ]
+                },
+                {
+                    "name":"ironGearWheel",
+                    "input":[
+                        {
+                            "tokenName":"ironPlate",
+                            "rate":4
+                        }
+                    ],
+                    "output":[
+                        {
+                            "tokenName":"ironGearWheel",
+                            "rate":2
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "processContainers":[
+        {
+            "name":"assemblyMachine1",
+            "processes":[
+                "assemblyProcesses"
+            ],
+            "initialCost":[
+                {
+                    "tokenName":"ironPlate",
+                    "amount":9
+                },
+                {
+                    "tokenName":"ironGearWheel",
+                    "amount":5
+                },
+                {
+                    "tokenName":"electronicCircuit",
+                    "amount":3
+                }
+            ]
+        }
+    ]
+}
