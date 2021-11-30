@@ -1,4 +1,5 @@
 {
+    "file": "CasterFile",
     "name": "Factorio",
     "timescale": "continuous",
     "isFinitelyTimed": false,
